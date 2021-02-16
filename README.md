@@ -1,3 +1,5 @@
+# With virtual environment
+
 ***Create the virtual environment(Windows)***
 
 ````
@@ -17,6 +19,7 @@ Make sure to activate the virtual environment
 ````
 pip install -r requirements.txt
 ````
+
 ***Migrate DataBase***
 
 Make sure to activate the virtual environment
@@ -24,6 +27,8 @@ Make sure to activate the virtual environment
 ````
 python manage.py migrate
 ````
+
+
 ***load data fixtures***
 
 ````
@@ -37,6 +42,28 @@ Make sure to activate the virtual environment
 ````
 python manage.py runserver
 ````
+
+# With Docker
+***Docker Build***
+
+````
+docker build -t local/graphql_api:beta .
+````
+
+***Docker Run***
+
+````
+docker run -p 8000:8000 local/graphql_api:beta
+````
+
+# With docker-compose
+***Run docker-compose***
+
+````
+docker-compose up
+````
+
+# Tests
 
 ***Run the tests***
 
@@ -83,3 +110,4 @@ python manage.py test
 }
 
 ````
+
